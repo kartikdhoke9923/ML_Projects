@@ -3,4 +3,10 @@ pandas
 numpy
 joblib
 scikit-learn==1.7.2
--e .
+matplotlib
+scikit-learn
+catboost
+seaborn
+xgboost
+lightgbm
+# -e .
