@@ -112,8 +112,8 @@ class ModelTrainer:
                 }
             }
 
-            model_report = evaluate_model(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models,
-                                           params=params, n_iter=30, cv=3)
+            model_report = evaluate_model(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models
+                                )
             
             for model_name, metrics in model_report.items():
                 print(model_name)

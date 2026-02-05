@@ -30,41 +30,31 @@ def evaluate_model(
     y_train,
     X_test,
     y_test,
-    models: dict,
-    params: dict,
-    n_iter=25,
-    cv=3
+    models: dict
 ):
     """
-    Train multiple classification models using RandomizedSearchCV
+    Train multiple classification models (NO hyperparameter tuning)
     and evaluate using ROC-AUC + Recall.
     """
     try:
         report = {}
 
         for model_name, model in models.items():
-            print(f"\nTraining {model_name} with RandomizedSearchCV...")
+            print(f"\nTraining {model_name}...")
 
-            param_dist = params.get(model_name, {})
-
-            rs = RandomizedSearchCV(
-                estimator=model,
-                param_distributions=param_dist,
-                n_iter=n_iter,
-                scoring="roc_auc",        # primary optimisation metric
-                cv=cv,
-                n_jobs=-1,
-                random_state=42,
-                verbose=1
-            )
-
-            rs.fit(X_train, y_train)
-
-            best_model = rs.best_estimator_
+            # Fit model
+            model.fit(X_train, y_train)
 
             # Predictions
-            y_pred = best_model.predict(X_test)
-            y_proba = best_model.predict_proba(X_test)[:, 1]
+            y_pred = model.predict(X_test)
+
+            if not hasattr(model, "predict_proba"):
+                raise CustomException(
+                    f"{model_name} does not support predict_proba",
+                    sys
+                )
+
+            y_proba = model.predict_proba(X_test)[:, 1]
 
             # Metrics
             roc_auc = roc_auc_score(y_test, y_proba)
@@ -73,12 +63,11 @@ def evaluate_model(
             f1 = f1_score(y_test, y_pred)
 
             report[model_name] = {
-                "model": best_model,
+                "model": model,
                 "roc_auc": roc_auc,
                 "recall": recall,
                 "precision": precision,
-                "f1_score": f1,
-                "best_params": rs.best_params_
+                "f1_score": f1
             }
 
         return report
