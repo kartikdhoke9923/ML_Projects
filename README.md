@@ -63,12 +63,11 @@ Streamlit Prediction Web App
 
 ## Model Performance
 
-Best Model: (Update after training)
+Best Model: LIGHTGBM
 
-Accuracy: XX %  
-Precision: XX %  
-Recall: XX %  
-F1 Score: XX  
+ROC AUC : 75.4  
+Recall: 30.1  
+
 
 ---
 
