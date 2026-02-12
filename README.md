@@ -1,6 +1,7 @@
 # 🏦 Credit Risk Prediction System (End-to-End ML Pipeline)
-To run the project first run eda file anf then run data ingestion file only ...... and every thing will run automatically with app ui
-An end-to-end Machine Learning project for predicting credit risk using customer financial and behavioral data.
+Run Full ML Pipeline Online (No Installation Required)
+
+https://colab.research.google.com/github/kartikdhoke9923/ML_Projects/blob/main/notebook/EDA_CREDIT_DEFAUL.ipynb
 
 This project follows a **production-style modular ML architecture** including:
 
