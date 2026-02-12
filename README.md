@@ -17,9 +17,10 @@ This project builds a machine learning system that predicts default risk using h
 
 ---
 
+<pre>
 ML_Projects/
 │
-├── artifacts/                          
+├── artifacts/                          # Generated outputs after training
 │   ├── data.csv
 │   ├── model_metrics.csv
 │   ├── model.pkl
@@ -27,7 +28,7 @@ ML_Projects/
 │   ├── train.csv
 │   └── test.csv
 │
-├── logs/                               
+├── logs/                               # Application logs
 │
 ├── notebook/
 │   ├── data/
@@ -61,6 +62,7 @@ ML_Projects/
 ├── requirements.txt
 ├── setup.py
 └── README.md
+</pre>
 
 ---
 
