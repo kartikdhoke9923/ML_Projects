@@ -1,5 +1,5 @@
 # Credit Card Default Prediction ML Pipeline
-Run Full ML Pipeline Online (No Installation Required)
+Run Full ML Pipeline Online 
 
 https://colab.research.google.com/github/kartikdhoke9923/ML_Projects/blob/main/notebook/EDA_CREDIT_DEFAUL.ipynb
 
