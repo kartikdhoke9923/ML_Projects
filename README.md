@@ -16,6 +16,7 @@ Early prediction helps reduce financial risk and improve decision-making.
 This project builds a machine learning system that predicts default risk using historical customer data.
 
 ---
+
 ML_Projects/
 │
 ├── artifacts/                          # Generated outputs after training
@@ -33,7 +34,7 @@ ML_Projects/
 │   │   ├── application_train.csv
 │   │   └── cleaned.csv
 │   │
-│   ├── EDA_CREDIT_DEFAUL.ipynb        # Online runnable notebook
+│   ├── EDA_CREDIT_DEFAUL.ipynb
 │   └── MODEL_TRAINING.ipynb
 │
 ├── src/
@@ -52,13 +53,11 @@ ML_Projects/
 │   ├── logger.py
 │   └── utils.py
 │
-├── venv/                               # Virtual environment (not pushed ideally)
-│
+├── venv/
 ├── ML_Project.egg-info/
-│
 ├── .gitattributes
 ├── .gitignore
-├── app.py                              # Streamlit prediction web app
+├── app.py
 ├── requirements.txt
 ├── setup.py
 └── README.md
