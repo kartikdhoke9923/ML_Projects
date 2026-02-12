@@ -16,27 +16,51 @@ Early prediction helps reduce financial risk and improve decision-making.
 This project builds a machine learning system that predicts default risk using historical customer data.
 
 ---
-
-## Project Structure
-
 ML_Projects/
 │
-├── artifacts/                   # Saved models and processed data
+├── artifacts/                          # Generated outputs after training
+│   ├── data.csv
+│   ├── model_metrics.csv
+│   ├── model.pkl
+│   ├── preprocessor.pkl
+│   ├── train.csv
+│   └── test.csv
 │
-├── notebook/                    # EDA and online runnable notebook
-│   └── EDA_CREDIT_DEFAUL.ipynb
+├── logs/                               # Application logs
+│
+├── notebook/
+│   ├── data/
+│   │   ├── application_train.csv
+│   │   └── cleaned.csv
+│   │
+│   ├── EDA_CREDIT_DEFAUL.ipynb        # Online runnable notebook
+│   └── MODEL_TRAINING.ipynb
 │
 ├── src/
 │   ├── components/
+│   │   ├── __init__.py
 │   │   ├── data_ingestion.py
 │   │   ├── data_transformation.py
-│   │   ├── model_trainer.py
+│   │   └── model_trainer.py
 │   │
 │   ├── pipeline/
-│   │   └── train_pipeline.py    # Main training entry point
+│   │   ├── __init__.py
+│   │   ├── train_pipeline.py
+│   │   └── predict_pipeline.py
+│   │
+│   ├── exception.py
+│   ├── logger.py
+│   └── utils.py
 │
-├── app.py                       # Streamlit prediction UI
+├── venv/                               # Virtual environment (not pushed ideally)
+│
+├── ML_Project.egg-info/
+│
+├── .gitattributes
+├── .gitignore
+├── app.py                              # Streamlit prediction web app
 ├── requirements.txt
+├── setup.py
 └── README.md
 
 ---
