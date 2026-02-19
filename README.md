@@ -1,4 +1,24 @@
 # Credit Card Default Prediction ML Pipeline
+Instructions to run full ml pipeline ---------->
+1. Clone repo:
+git clone https://github.com/kartikdhoke9923/ML_Projects.git
+cd ML_Projects
+
+2. Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate
+
+3. Install Dependencies:
+pip install -r requirements.txt
+pip install -e .
+
+4. Run End-to-End Pipeline:
+python -m src.components.data_ingestion
+
+5. Run Streamlit App (To view app that is made for prediction)
+streamlit run app.py
+
+or 
 Run Full ML Pipeline Online 
 
 https://colab.research.google.com/github/kartikdhoke9923/ML_Projects/blob/main/notebook/EDA_CREDIT_DEFAUL.ipynb
