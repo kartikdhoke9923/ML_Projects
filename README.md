@@ -18,10 +18,6 @@ python -m src.components.data_ingestion
 5. Run Streamlit App (To view app that is made for prediction)
 streamlit run app.py
 
-or 
-Run Full ML Pipeline Online 
-
-https://colab.research.google.com/github/kartikdhoke9923/ML_Projects/blob/main/notebook/EDA_CREDIT_DEFAUL.ipynb
 
 End-to-end Machine Learning pipeline to predict whether a customer will default on credit card payments.  
 This project covers the complete ML lifecycle including data ingestion, preprocessing, model training, evaluation, and deployment through a web application.
