@@ -9,7 +9,7 @@ python -m venv venv
 venv\Scripts\activate
 
 3. Install Dependencies:
-pip install -r requirements.txt
+pip install -r requirements.txt   and 
 pip install -e .
 
 4. Run End-to-End Pipeline:
