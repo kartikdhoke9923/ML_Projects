@@ -63,4 +63,4 @@ if __name__=="__main__":
 
     ModelTrainer=ModelTrainer()
     ModelTrainer.initiate_model_trainer(train_arr, test_arr, preprocessor_path=_ )
-    os.system("streamlit run app.py")
+    
